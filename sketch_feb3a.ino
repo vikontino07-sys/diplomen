@@ -43,7 +43,6 @@ void initWifi() {
   sendAT("AT+CWJAP=\"" + SSID + "\",\"" + PASS + "\"", 10000);
 }
 
-// ---------- SEND DATA ----------
 void sendDataToServer(int val135, int val6, String status) {
   String url = "/air_project/save_data.php?mq135=" + String(val135) +
   "&mq6=" + String(val6) +
