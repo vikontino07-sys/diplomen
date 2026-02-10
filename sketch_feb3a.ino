@@ -11,7 +11,7 @@ String SERVER_IP = "192.168.1.100";
 
 void setup() {
   Serial.begin(9600);         
-  espSerial.begin(115200);     
+  espSerial.begin(9600);     
 
   delay(2000);
   initWifi();
