@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air Quality Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="status-circle" id="main-orb">
+                <span class="status-icon">🍃</span>
+                <p>AIR QUALITY: <strong id="status-text">GOOD</strong></p>
+            </div>
+        </header>
+
+        <main class="dashboard">
+            <div class="card">
+                <h3>AIR QUALITY (MQ-135)</h3>
+                <div class="value" id="mq135-val">0</div>
+                <p>PPM / Index</p>
+            </div>
+            <div class="card">
+                <h3>GAS LEVEL (MQ-6)</h3>
+                <div class="value" id="mq6-val">0</div>
+                <p>Intensity</p>
+            </div>
+            <div class="card">
+                <div class="multi-value">
+                    <div>
+                        <h3>TEMP</h3>
+                        <div class="small-value"><span id="temp-val">23</span>°C</div>
+                    </div>
+                    <div>
+                        <h3>HUMIDITY</h3>
+                        <div class="small-value"><span id="hum-val">45</span>%</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <section class="chart-container">
+            <h3>AIR QUALITY HISTORY (LAST 24H)</h3>
+            <canvas id="airChart"></canvas>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

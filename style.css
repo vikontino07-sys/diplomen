@@ -1,0 +1,75 @@
+body {
+    background-color: #12141d;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    background: #1c1f2b;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.status-circle {
+    border: 4px solid #00ff88; /* Направих го малко по-дебело за видимост */
+    display: inline-block;
+    padding: 30px;
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(0, 255, 136, 0.3);
+    transition: all 0.5s ease; /* Плавно преливане на цветовете */
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.card {
+    background: #252936;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.value {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 10px 0;
+    transition: color 0.5s;
+}
+
+.small-value {
+    font-size: 1.5rem;
+    color: #00ff88;
+}
+
+.multi-value {
+    display: flex;
+    justify-content: space-around;
+}
+
+.chart-container {
+    background: #252936;
+    padding: 20px;
+    border-radius: 15px;
+}
